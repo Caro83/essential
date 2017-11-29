@@ -4,6 +4,10 @@
   src: url("../fonts/Open_Sans/OpenSans-Regular.ttf"); }
 
 @font-face {
+  font-family: 'OpenSans-Light';
+  src: url("../fonts/Open_Sans/OpenSans-Light.ttf"); }
+
+@font-face {
   font-family: "FontAwesome";
   src: url("../fonts/FontAwesome/FontAwesome.otf"); }	
 
@@ -12,17 +16,28 @@
 body, html {
 	margin: 0;
 	width: 100%;
-	font-family: 'OpenSans-Regular', sans-serif;
+  height: 100%;
+	font-family: 'OpenSans-Light';
 }
 
-/* ---------- Header --------- */
+/*---------- Parallax --------------------*/
+.parallax {
+    /* The image used */
+    background-image: url("../img/slider1.jpg");
 
-header img{
-	margin: 0 auto;
-	width: 100%;
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-/* ---------- Navbar --------- */
+/* ---------------------------------------
+              HEADER
+-----------------------------------------*/
+  /* ---------- Navbar --------- */
 .topnav {
   overflow: hidden;
   background: transparent;
@@ -44,18 +59,13 @@ header img{
   color: black;
 }
 
-.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
 .topnav .icon {
   display: none;
 }
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
-  	display: none;
+    display: none;
   }
 
   .topnav a.icon {
@@ -66,7 +76,7 @@ header img{
 
 @media screen and (max-width: 600px) {
   .topnav.responsive {
-  	position: relative;
+    position: relative;
   }
 
   .topnav.responsive .icon {
@@ -80,4 +90,249 @@ header img{
     text-align: left;
   }
 
+}
+
+/*--------------------------------------------
+              Main
+--------------------------------------------*/
+main {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+section {
+  justify-content: space-around;
+  margin: 4rem 0;
+} 
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h2, h3, h4 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+button {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration:none; 
+}
+
+  /* -------------- Assets --------------*/
+
+.assets {
+  display: flex;
+}
+.assets div {
+  color: #1E1E1E;
+  text-align: center;
+  flex-direction: column;
+}
+
+.assets i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+  /* -------------- About --------------*/
+.about {
+  display: flex;
+  background-color: #1E1E1E;
+  color: #fff;
+  text-align: center;
+}
+
+.about div {
+  flex-direction: row;
+}
+
+.about h3 {
+  margin-top: 4rem;
+}
+
+.about p {
+  margin: 0 4rem;
+  margin-bottom: 4rem;
+}
+
+  /* -------------- Team --------------*/
+.team {
+  display: flex;
+}
+
+.team div {
+  flex-direction: row;
+}
+
+.team-members {
+  /*border: 2px solid red;*/
+  display: flex;
+  flex-direction: column;
+}
+
+.team-members img{
+  width: 100%;
+}
+
+.team article {
+  padding: 2rem;
+}
+
+.team h3 {
+  text-align: center;
+}
+
+  /* -------------- Numbers --------------*/
+.numbers {
+  background-color: #1E1E1E;
+  color: #fff;
+  display: flex;
+}
+
+.numbers div {
+  flex-direction: row;
+  margin: 0 4rem;
+}
+
+  /* -------------- Projects --------------*/
+
+
+.projects h3 {
+  text-align: center;
+}
+
+.projects ul {
+  justify-content: space-around;
+  margin: 3rem 20rem;
+}
+
+.projects a {
+  color: #337ab7;
+}
+
+.projects a:hover {
+  color: #555;
+}
+
+.projects .grid {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.projects .grid img {
+  width: 100%;
+}
+
+.load_more {
+  display: flex;
+  margin: auto;
+  padding: 4rem 4rem;
+  background-color: #F7F7F7;
+}
+.load_more button {
+  margin: auto;
+  background-color: #1E1E1E;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 1rem 2rem;
+  letter-spacing: 3px;
+}
+
+  /* -------------- Newsletter --------------*/
+.newsletter {
+  background-color: #fff;
+  text-align: center;
+}
+
+.newsletter h3 {
+  text-transform: capitalize;
+}
+
+.newsletter input {
+  border: none;
+
+}
+
+.subscribe {
+  display: flex;
+  margin: auto;
+  padding: 3rem 4rem;
+  background-color: #fff;
+}
+.subscribe button {
+  margin: auto;
+  background-color: #fff;
+  color: #1E1E1E;
+  border: 1px solid #1E1E1E;
+  font-size: 16px;
+  padding: 1rem 2rem;
+  letter-spacing: 3px;
+}
+
+  /* -------------- Get started --------------*/
+.get-started {
+  background-color: #1E1E1E;
+  color: #fff;
+  text-align: center;
+}
+
+.btn_get-started {
+  display: flex;
+  margin: auto;
+  padding: 3rem 4rem;
+  background-color: #1E1E1E;
+}
+.btn_get-started button {
+  margin: auto;
+  background-color: #1E1E1E;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 16px;
+  padding: 1rem 2rem;
+  letter-spacing: 3px;
+}
+
+  /* -------------- Services --------------*/
+.services {
+  background-color: #fff;
+  color: #1E1E1E;
+  text-align: center;
+  margin: 3rem 4rem;
+}
+
+.services p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.services .grid {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin-top: 2rem;
+}
+
+.services .grid img {
+  width: 20%;
+}
+
+  /* -------------- Témoignages --------------*/
+.testimonials {
+  text-align: center;
 }

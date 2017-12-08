@@ -6,3 +6,12 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+$(document).ready(function(){
+  $('.testimonials-carousel').slick({
+    slidesToShow:1,
+  	slidesToScroll: 1,
+ 	autoplay: true,
+  	autoplaySpeed: 2000,
+  });
+});

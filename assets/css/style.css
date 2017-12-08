@@ -37,6 +37,12 @@ body, html {
 /* ---------------------------------------
               HEADER
 -----------------------------------------*/
+header {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
   /* ---------- Navbar --------- */
 .topnav {
   overflow: hidden;
@@ -105,11 +111,16 @@ ul {
 }
 section {
   justify-content: space-around;
-  margin: 4rem 0;
 } 
+
+h1 {
+  font-size: 70px;
+  letter-spacing: 10px;
+}
 
 h2 {
   font-size: 30px;
+  letter-spacing: 5px;
 }
 
 h3 {
@@ -137,6 +148,7 @@ a {
 
 .assets {
   display: flex;
+  padding: 4rem;
 }
 .assets div {
   color: #1E1E1E;
@@ -202,6 +214,7 @@ a {
   background-color: #1E1E1E;
   color: #fff;
   display: flex;
+  padding: 4rem;
 }
 
 .numbers div {
@@ -258,6 +271,7 @@ a {
 .newsletter {
   background-color: #fff;
   text-align: center;
+  padding: 4rem;
 }
 
 .newsletter h3 {
@@ -290,6 +304,7 @@ a {
   background-color: #1E1E1E;
   color: #fff;
   text-align: center;
+  padding: 4rem;
 }
 
 .btn_get-started {
@@ -335,4 +350,110 @@ a {
   /* -------------- Témoignages --------------*/
 .testimonials {
   text-align: center;
+  color: #fff;
+  padding: 4rem;
+}
+
+.testimonials p {
+  margin: 2rem;
+}
+
+.owl-carousel div {
+  width: 100%;
+  border: 1px solid red;
+}
+
+  /* -------------- Clients --------------*/
+.clients {
+  background-color: #F7F7F7;
+  padding: 4rem;
+}
+
+.clients .grid {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.clients .grid img {
+  width: 50%;
+  margin: auto;
+}
+
+  /* -------------- Contact --------------*/
+.contact {
+    text-align: center;
+    padding: 4rem;
+}
+
+.contact div {
+  display: flex;
+  margin: auto;
+
+}
+
+.contact div div {
+  flex-direction: column;
+}
+
+.contact h2 {
+  margin-bottom: 4rem;
+}
+.contact h4 {
+  letter-spacing: 2px;
+}
+
+.contact i {
+  font-size: 24px;
+}
+
+.contact p, .contact address {
+  font-size:14px;
+  color: #555;
+}
+
+.contact a {
+  font-size: 14px;
+  color: #1E1E1E;}
+
+  /* -------------- Network --------------*/
+
+.network {
+  background-color: #F7F7F7;
+  padding: 4rem;
+  text-align: center;
+}
+
+.network ul {
+  margin: auto;
+  width:30%;
+}
+
+.network li {
+  margin: auto;
+}
+
+.network h4 {
+  margin-bottom: 3rem;
+}
+
+.network i {
+  font-size: 15px;
+}
+
+.network a {
+  color: #1E1E1E;
+}
+/*--------------------------------------------
+              FOOTER
+--------------------------------------------*/
+footer {
+  background-color: #1E1E1E;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  font-size: 12px;
+  letter-spacing: 5px;
 }

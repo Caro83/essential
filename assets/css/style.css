@@ -21,6 +21,7 @@ body, html {
 	font-family: 'OpenSans-Light';
 }
 
+
 /*---------- Parallax --------------------*/
 .parallax {
     /* The image used */
@@ -259,6 +260,49 @@ a {
   width: 100%;
 }
 
+/*------------ Button -------------------*/
+/* Shutter Out Horizontal */
+.hvr-shutter-out-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  background: #1E1E1E;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-shutter-out-horizontal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
+  color: #1E1E1E;
+}
+.hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 .load_more {
   display: flex;
   margin: auto;
@@ -267,9 +311,8 @@ a {
 }
 .load_more button {
   margin: auto;
-  background-color: #1E1E1E;
   color: #fff;
-  border: none;
+  border: 1px solid #1E1E1E;
   font-size: 16px;
   padding: 1rem 2rem;
   letter-spacing: 3px;
@@ -290,6 +333,48 @@ a {
   border: none;
 
 }
+/*---------- boutons --------------------*/
+/* Shutter In Horizontal */
+.hvr-shutter-black {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  background: #1E1E1E;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-shutter-black:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-shutter-black:hover, .hvr-shutter-black:focus, .hvr-shutter-black:active {
+  color: white;
+}
+.hvr-shutter-black:hover:before, .hvr-shutter-black:focus:before, .hvr-shutter-black:active:before {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
 
 .subscribe {
   display: flex;
@@ -299,8 +384,7 @@ a {
 }
 .subscribe button {
   margin: auto;
-  background-color: #fff;
-  color: #1E1E1E;
+  color: #000;
   border: 1px solid #1E1E1E;
   font-size: 16px;
   padding: 1rem 2rem;
@@ -315,6 +399,48 @@ a {
   padding: 4rem;
 }
 
+/*---------- boutons --------------------*/
+.hvr-shutter-white {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  background: #fff;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-shutter-white:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1E1E1E;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-shutter-white:hover, .hvr-shutter-white:focus, .hvr-shutter-white:active {
+  color: #000;
+}
+.hvr-shutter-white:hover:before, .hvr-shutter-white:focus:before, .hvr-shutter-white:active:before {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
 .btn_get-started {
   display: flex;
   margin: auto;
@@ -323,7 +449,6 @@ a {
 }
 .btn_get-started button {
   margin: auto;
-  background-color: #1E1E1E;
   color: #fff;
   border: 1px solid #fff;
   font-size: 16px;
@@ -364,11 +489,6 @@ a {
 
 .testimonials p {
   margin: 2rem;
-}
-
-.owl-carousel div {
-  width: 100%;
-  border: 1px solid red;
 }
 
   /* -------------- Clients --------------*/

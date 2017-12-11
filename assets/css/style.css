@@ -47,31 +47,33 @@ transform:translate(-50%, -50%);
               HEADER
 -----------------------------------------*/
 header {
-  text-align: center;
   color: #fff;
   text-transform: uppercase;
 
 }
 
   /* ---------- Navbar --------- */
+
+.logo {
+  padding-top: 1rem;
+}
 .topnav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   overflow: hidden;
   background: transparent;
   position: fixed;
+  border-bottom: 1px solid #F7F7F7;
 }
 
 .topnav a {
-  display: inline-flex;
   color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background: transparent;
-  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .topnav .icon {
@@ -79,7 +81,7 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
+  .menu a {
     display: none;
   }
 
@@ -106,6 +108,53 @@ header {
   }
 
 }
+  /* ------------ Scroll down --------- */
+
+#section05 a {
+  padding-top: 70px;
+}
+#section05 a span {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb05 1.5s infinite;
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb05 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
 
 /*--------------------------------------------
               Main

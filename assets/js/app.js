@@ -15,3 +15,10 @@ $(document).ready(function(){
   	autoplaySpeed: 3000,
   });
 });
+
+$(function() {
+  $('#section05').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $('section.about').offset().top}, 500, 'linear');
+  });
+});

@@ -326,7 +326,6 @@ a {
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  width: 200%;
   backface-visibility: hidden;
 }
 
@@ -406,9 +405,30 @@ a {
 @media screen and (max-width: 600px) {
   .projects ul {
   max-width: 80%;
-}
+  }
+
+  .projects .grid {
+  display: grid;
+  grid-template-columns: 100%;
+  }
  
 }
+@media screen and (min-width: 600px) and (max-width: 979px) {
+  .projects .grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  }
+ 
+}
+
+@media screen and (min-width: 980px) {
+  .projects .grid {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+ 
+}
+
 
 .projects a {
   color: #000;
@@ -418,14 +438,52 @@ a {
   color: #444;
 }
 
-.projects .grid {
-  display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
+.projects .grid img {
+  max-width: 100%;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+ /* backface-visibility: hidden;*/
 }
 
-.projects .grid img {
-  width: 100%;
+.modal-project {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13rem;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
 }
+
+.projects article {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 2%;
+  background-color: #1E1E1E;
+}
+
+.projects article:hover img {
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  opacity: 0.3;
+
+}
+
+.grid article:hover .modal-project {
+  opacity: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.grid article:hover .modal-project  a {
+  color: #fff;
+}
+
 
 /*------------ Button -------------------*/
 /* Shutter Out Horizontal */

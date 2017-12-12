@@ -218,7 +218,7 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 24px;
   letter-spacing: 5px;
 }
 
@@ -296,6 +296,9 @@ a {
   display: flex;
 }
 
+.team h2 {
+  font-size: 25px;
+}
 .team div {
   flex-direction: row;
 }
@@ -312,14 +315,17 @@ a {
   display: flex;
   flex-direction: column;
   margin: 3rem 0;
+}
 
+.team-members a {
+  color: #fff;
 }
 
 .team-members img{
   max-width: 100%;
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   width: 200%;
   backface-visibility: hidden;
 }
@@ -330,12 +336,19 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 13rem;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%)
 }
 
 .team-members article:hover .modal-member {
   opacity: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.team-members article:hover .modal-member a {
+  color: #fff;
 }
 
 .team-members article {
@@ -344,6 +357,7 @@ a {
   width: 100%;
   height: auto;
   margin: 2%;
+  background-color: #1E1E1E;
 }
 
 .team-members article:hover img {
@@ -358,7 +372,11 @@ a {
   text-align: center;
 }
 
+.team li {
+  padding: 0.5rem;
+}
   /* -------------- Numbers --------------*/
+
 .numbers {
   background-color: #1E1E1E;
   color: #fff;
@@ -374,21 +392,30 @@ a {
   /* -------------- Projects --------------*/
 
 
-.projects h3 {
+.projects h2 {
   text-align: center;
 }
 
 .projects ul {
   justify-content: space-around;
-  margin: 3rem 20rem;
+  margin: 3rem auto;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .projects ul {
+  max-width: 80%;
+}
+ 
 }
 
 .projects a {
-  color: #337ab7;
+  color: #000;
 }
 
 .projects a:hover {
-  color: #555;
+  color: #444;
 }
 
 .projects .grid {
@@ -462,7 +489,7 @@ a {
 .newsletter {
   background-color: #fff;
   text-align: center;
-  padding: 4rem;
+  padding: 4rem 0;
 }
 
 .newsletter h3 {
@@ -531,12 +558,14 @@ a {
   letter-spacing: 3px;
 }
 
+
+
   /* -------------- Get started --------------*/
 .get-started {
   background-color: #1E1E1E;
   color: #fff;
   text-align: center;
-  padding: 4rem;
+  padding: 4rem 0;
 }
 
 /*---------- boutons --------------------*/

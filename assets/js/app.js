@@ -22,3 +22,11 @@ $(function() {
     $('html, body').animate({ scrollTop: $('section.about').offset().top}, 500, 'linear');
   });
 });
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 200) {
+    $('.topnav').addClass('color-change');
+  } else {
+    $('.topnav').removeClass('color-change');
+  }
+});

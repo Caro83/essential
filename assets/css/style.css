@@ -75,16 +75,14 @@ nav {
   transition all: 0.4s ease;
 }
 
+/*.color-change {
+  background-color: #fff;
+  color: #000;
+}
 
-
-  .color-change {
-    background-color: #fff;
-    color: #000;
-  }
-
-  .topnav.color-change a {
-    color: #000;
-  }
+.topnav.color-change a {
+  color: #000;
+}*/
 
 .topnav a {
   display: inline-flex;
@@ -97,7 +95,6 @@ nav {
 
 .topnav a:hover {
   background: transparent;
-  color: black;
 }
 
 .topnav .icon {
@@ -123,15 +120,13 @@ nav {
 
   .topnav.responsive .menu {
     padding: 14px 0px;
-
   }
 
   .topnav.responsive {
-    position: relative;
+   /* position: relative;*/
     display: block;
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 1;
-
   }
 
   .topnav.responsive .icon {
@@ -391,7 +386,7 @@ a {
   /* -------------- Projects --------------*/
 
 
-.projects h2 {
+.projects h3 {
   text-align: center;
 }
 

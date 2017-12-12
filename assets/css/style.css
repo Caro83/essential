@@ -699,8 +699,27 @@ a {
 
 .services .grid {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
   margin-top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .services .grid {
+  grid-template-columns: 100%;
+  }
+ 
+}
+@media screen and (min-width: 600px) and (max-width: 979px) {
+  .services .grid {
+  grid-template-columns: 50% 50%;
+  }
+ 
+}
+
+@media screen and (min-width: 980px) {
+  .services .grid {
+  grid-template-columns: 25% 25% 25% 25%;
+  }
+ 
 }
 
 .services .grid img {
@@ -726,12 +745,30 @@ a {
 
 .clients .grid {
   display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
 }
 
 .clients .grid img {
-  width: 50%;
   margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .clients .grid {
+  grid-template-columns: 100%;
+  }
+ 
+}
+@media screen and (min-width: 600px) and (max-width: 979px) {
+  .clients .grid {
+  grid-template-columns: 50% 50%;
+  }
+ 
+}
+
+@media screen and (min-width: 980px) {
+  .clients .grid {
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+ 
 }
 
   /* -------------- Contact --------------*/

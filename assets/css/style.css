@@ -757,6 +757,7 @@ a {
   }
  
 }
+
 @media screen and (min-width: 600px) and (max-width: 979px) {
   .clients .grid {
   grid-template-columns: 50% 50%;
@@ -779,12 +780,12 @@ a {
 
 .contact div {
   display: flex;
-  margin: auto;
+  margin: 1rem auto;
   flex-wrap: wrap;
 
 }
 
-.contact div div {
+.contact-item {
   flex-direction: column;
 }
 
@@ -819,6 +820,17 @@ a {
 .network ul {
   margin: auto;
   width:30%;
+}
+
+@media screen and (max-width: 600px) {
+  .network ul{
+    width: 100%;
+  }
+
+  .network {
+    padding: 3rem 0;
+  }
+ 
 }
 
 .network li {
